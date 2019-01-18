@@ -1,0 +1,25 @@
+#连接Oracle
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@172.20.1.109:1524:KEJIANG
+    username: C##SHANGQI
+    password: 123456
+    max-active: 10
+    max-idle: 5
+    min-idle: 2
+    initial-size: 6
+
+
+#控制台打印SQL
+logging:
+  level:
+    com.saic.saicbackbusiness.dao:
+      DEBUG
+
+#MyBatis
+mybatis:
+  mapper-locations:
+    classpath:mapper/*.xml
+  type-aliases-package:
+    com.saic.back.entity
